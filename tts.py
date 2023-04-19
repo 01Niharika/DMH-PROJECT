@@ -17,7 +17,7 @@ voices = engine.getProperty('voices')       #getting details of current voice
 engine.setProperty('voice', voices[1].id)   #changing index, changes voices. 1 for female
 
 engine.say("Hello World!")
-engine.say('My current speaking rate is ' + str(rate))
+engine.say('My current name is ' + str(rate))
 engine.runAndWait()
 engine.stop()
 
