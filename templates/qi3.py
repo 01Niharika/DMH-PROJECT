@@ -8,7 +8,7 @@ window = tk.Tk()
 window.geometry("500x500")
 window.title("DEAF MUTE HELPER")
 
-bg_image = PhotoImage(file="background.png")
+bg_image = PhotoImage(file="C:\Users\Hp\Documents\DMH-PROJECT\static\images\wallpaper.png")
 bg_label = tk.Label(window, image=bg_image)
 bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
