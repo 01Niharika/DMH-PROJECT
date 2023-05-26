@@ -1,6 +1,8 @@
 import tkinter as tk
 from PIL import ImageTk, Image
 from tts import  convert_text_to_speech
+from stt import convert_speech_to_text
+from camera import start
 
 # Create the main window
 window = tk.Tk()
@@ -14,9 +16,13 @@ background_photo = ImageTk.PhotoImage(background_image)
 background_label = tk.Label(window, image=background_photo)
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
+def camera_start():
+    start()
+
 # Create the buttons
-launch_button = tk.Button(window, text="Launch Camera")
+launch_button = tk.Button(window, text="Launch Camera", command=camera_start)
 launch_button.place(x=100, y=50)
+
 def submit():
     text = text_entry.get()
     convert_text_to_speech(text)
@@ -30,11 +36,9 @@ def submit():
         image_label.place(x=80, y=180)
         
 
+# on click of submit button
 submit_button = tk.Button(window , text="Submit",command=submit)
 submit_button.place(x=600, y=50)
-# on click of submit button
-
-    
 
 # Create the text entry
 text_entry = tk.Entry(window)
