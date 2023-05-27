@@ -18,4 +18,4 @@ def convert_speech_to_text():
     except sr.RequestError as e:
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
 
-convert_speech_to_text()
+#convert_speech_to_text()
